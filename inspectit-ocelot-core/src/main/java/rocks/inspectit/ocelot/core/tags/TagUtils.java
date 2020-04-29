@@ -33,6 +33,7 @@ public final class TagUtils {
     }
 
     private static void printWarningOnce() {
+        System.out.println("Sample");
         if (!isWarningPrinted) {
             log.warn("illegal tag value converted to <invalid>");
             isWarningPrinted = true;
