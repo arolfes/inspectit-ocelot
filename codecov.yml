@@ -1,6 +1,6 @@
 comment:
   layout: "diff, files"
-  behavior: default
+  behavior: once
   require_changes: false
 coverage:
   precision: 2
