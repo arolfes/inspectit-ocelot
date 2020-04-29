@@ -54,11 +54,11 @@ jobs:
       - name: systemTest
         run: ./gradlew systemTest
       - name: codeCoverage if oracle-jdk8
-        if: matrix.dockerimage == 'sgrio/java:jdk_8_ubuntu' && github.event_name == 'pull_request'
+        if: matrix.dockerimage == 'sgrio/java:jdk_8_ubuntu'
         run: |
           ./gradlew codeCoverageReport
       - name: upload to codecov.io
-        if: matrix.dockerimage == 'sgrio/java:jdk_8_ubuntu' && github.event_name == 'pull_request'
+        if: matrix.dockerimage == 'sgrio/java:jdk_8_ubuntu'
         uses: codecov/codecov-action@v1
         with:
           file: ./build/reports/jacoco/report.xml
